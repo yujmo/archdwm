@@ -5,4 +5,6 @@ RUN yaourt -S xorg-server --noconfirm && yaourt -S xorg-server-xvfb --noconfirm 
 	&& yaourt -R dwm --noconfirm \
 	&& yaourt -S gcc --noconfirm
 ADD dwm /dwm
-RUN cd /dwm && make && make install && yaourt -S fcitx --noconfirm && yaourt -S fcitx-sogoupinyin --noconfirm
+RUN cd /dwm && make && make install && yaourt -S fcitx --noconfirm && yaourt -S fcitx-sogoupinyin --noconfirm \
+	&& yaourt -S supervisor --noconfirm \
+	&& yaourt -S x11vnc --noconfirm
